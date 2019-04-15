@@ -17,7 +17,7 @@ prototypes:
       test prototype for tenablescannersminer.Miner, mines tenable.io scanners
     config:
       # source url to scrap indicators from
-      source_url: https://docs.tenable.com/cloud/Content/Scans/Scanners.htm
+      url: https://docs.tenable.com/cloud/Content/Scans/Scanners.htm
       # age out of indicators
       # disabled, removed when they disappear from the url
       age_out:
