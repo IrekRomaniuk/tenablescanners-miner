@@ -1,18 +1,16 @@
 {
-    "version": "0.5",
-    "name": "youtube-miner",
-    "author": "Palo Alto Networks",
-    "author_email": "techbizdev@paloaltonetworks.com",
-    "description": "Sample MineMeld node extension for mining Youtube API",
-    "url": "https://github.com/PaloAltoNetworks/youtube-miner",
+    "version": "0.1",
+    "name": "tenablescanners-miner",
+    "author": "Irek Romaniuk",
+    "author_email": "irek@romaniuk.us",
+    "description": "Sample MineMeld node extension for scarpping scanners addresses from docs.tenable.com/cloud/Content/Scans/Scanners.htm",
+    "url": "https://github.com/IrekRomaniuk/tenablescanners-miner",
     "entry_points": {
         "minemeld_nodes": {
-            "youtubeminer.Miner": "youtubeminer.node:Miner",
-            "youtubeminer.PlaylistMiner": "youtubeminer.node:PlaylistMiner",
-            "youtubeminer.ChannelMiner": "youtubeminer.node:ChannelMiner"
+            "tenablescannersminer.Miner": "tenablescannersminer.node:Miner"
         },
         "minemeld_prototypes": {
-            "youtubeminer.prototypes": "youtubeminer:prototypes"
+            "tenablescannersminer.prototypes": "tenablescannersminer:prototypes"
         }
     },
     "manifest_version": 0

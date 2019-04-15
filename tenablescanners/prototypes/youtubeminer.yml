@@ -1,0 +1,28 @@
+url: https://github.com/PaloAltoNetworks/youtube-miner
+description: >
+  Sample extension for MineMeld.
+
+prototypes:
+  eevblog:
+    author: IrekRomaniuk
+    class: tenablescannersminer.Miner
+    development_status: EXPERIMENTAL
+    node_type: miner
+    indicator_types:
+      - IPv4
+    tags:
+      - extension
+      - tenablescannersminer
+    description: >
+      test prototype for tenablescannersminer.Miner, mines tenable.io scanners
+    config:
+      # source url to scrap indicators from
+      source_url: https://docs.tenable.com/cloud/Content/Scans/Scanners.htm
+      # age out of indicators
+      # disabled, removed when they disappear from the url
+      age_out:
+        sudden_death: true
+        default: null
+      # flag indicators with share level green
+      attributes:
+        share_level: green
