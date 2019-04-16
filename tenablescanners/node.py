@@ -14,9 +14,9 @@ class Miner(BasePollerFT):
     def configure(self):
         super(Miner, self).configure()
 
-        self.polling_timeout = self.config.get('polling_timeout', 20)
+        self.polling_timeout = self.config.get('polling_timeout', 30)
         self.verify_cert = self.config.get('verify_cert', True)
-
+        self.interval = self.config.get('interval', 3600)
         self.url = 'https://docs.tenable.com/cloud/Content/Scans/Scanners.htm'
 
     def _build_iterator(self, item):
@@ -24,7 +24,8 @@ class Miner(BasePollerFT):
         rkwargs = dict(
             stream=False,
             verify=self.verify_cert,
-            timeout=self.polling_timeout
+            timeout=self.polling_timeout,
+            interval=self.interval
         )
 
         r = requests.get(
@@ -44,7 +45,7 @@ class Miner(BasePollerFT):
         table = html_soup.find_all('table')[0]
         df = pd.read_html(str(table))[0]
         result = df[df.columns[1]].tolist()
-
+        result = ' '.join(result).split()
         return result
 
     def _process_item(self, item):
