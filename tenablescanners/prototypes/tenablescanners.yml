@@ -3,7 +3,7 @@ description: >
   Sample extension for MineMeld.
 
 prototypes:
-  eevblog:
+  miner:
     author: IrekRomaniuk
     class: tenablescanners.Miner
     development_status: EXPERIMENTAL

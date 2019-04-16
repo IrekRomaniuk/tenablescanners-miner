@@ -18,7 +18,6 @@ class Miner(BasePollerFT):
         self.verify_cert = self.config.get('verify_cert', True)
 
         self.url = 'https://docs.tenable.com/cloud/Content/Scans/Scanners.htm'
-        )
 
     def _build_iterator(self, item):
         # builds the request and retrieves the page
