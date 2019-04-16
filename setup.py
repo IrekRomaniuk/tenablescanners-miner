@@ -26,7 +26,6 @@ setup(
     author=_metadata['author'],
     author_email=_metadata['author_email'],
     description=_metadata['description'],
-    url=_metadata['url'],
     classifiers=[
         'Framework :: MineMeld',
         'Development Status :: 3 - Alpha',
