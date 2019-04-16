@@ -17,7 +17,7 @@ prototypes:
       test prototype for tenablescanners.Miner, mines tenable.io scanners
     config:
       interval: 3600
-      # source url to scrap indicators from
+      # source url to scrap indicators from (don't change)
       url: https://docs.tenable.com/cloud/Content/Scans/Scanners.htm
       # age out of indicators
       # disabled, removed when they disappear from the url
