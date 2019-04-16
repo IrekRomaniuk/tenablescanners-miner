@@ -12,7 +12,7 @@ prototypes:
       - IPv4
     tags:
       - extension
-      - tenablescanners
+      - nessus
     description: >
       test prototype for tenablescanners.Miner, mines tenable.io scanners
     config:
