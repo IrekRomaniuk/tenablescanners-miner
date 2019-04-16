@@ -1,10 +1,12 @@
 # python setup.py clean
 # python setup.py bdist_wheel
 
-from setuptools import setup, find_packages
+from setuptools import Extension, setup, find_packages
 
 import sys
 import json
+import os.path
+sys.path.insert(0, os.path.abspath('.'))
 
 with open('requirements.txt') as f:
     _requirements = f.read().splitlines()
