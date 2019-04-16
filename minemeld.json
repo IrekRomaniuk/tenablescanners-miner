@@ -4,7 +4,6 @@
     "author": "Irek Romaniuk",
     "author_email": "irek@romaniuk.us",
     "description": "Sample MineMeld node extension for scarpping scanners addresses from docs.tenable.com/cloud/Content/Scans/Scanners.htm",
-    "url": "https://github.com/IrekRomaniuk/tenablescanners-miner",
     "entry_points": {
         "minemeld_nodes": {
             "tenablescanners-miner.Miner": "tenablescanners-miner.node:Miner"
