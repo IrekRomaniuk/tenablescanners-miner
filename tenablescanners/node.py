@@ -39,11 +39,7 @@ class Miner(BasePollerFT):
                       self.name, r.status_code, r.content)
             raise
 
-        # parse the page
-        table = soup.find_all('table')[0]
-        df = pd.read_html(str(table))[0]
-        addresses = df[df.columns[1]].tolist()
-
+        # parse the table
         html_soup = BeautifulSoup(r.content, "lxml")
         table = html_soup.find_all('table')[0]
         df = pd.read_html(str(table))[0]
