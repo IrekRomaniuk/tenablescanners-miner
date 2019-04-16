@@ -14,7 +14,7 @@ prototypes:
       - extension
       - nessus
     description: >
-      test prototype for tenablescanners.Miner, mines tenable.io scanners
+      prototype for tenablescanners.Miner, mines tenable.io scanners
     config:
       interval: 3600
       # source url to scrap indicators from (don't change)
