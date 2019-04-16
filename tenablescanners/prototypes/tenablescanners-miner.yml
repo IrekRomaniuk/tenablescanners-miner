@@ -5,16 +5,16 @@ description: >
 prototypes:
   eevblog:
     author: IrekRomaniuk
-    class: tenablescannersminer.Miner
+    class: tenablescanners-miner.Miner
     development_status: EXPERIMENTAL
     node_type: miner
     indicator_types:
       - IPv4
     tags:
       - extension
-      - tenablescannersminer
+      - tenablescanners-miner
     description: >
-      test prototype for tenablescannersminer.Miner, mines tenable.io scanners
+      test prototype for tenablescanners-miner.Miner, mines tenable.io scanners
     config:
       # source url to scrap indicators from
       url: https://docs.tenable.com/cloud/Content/Scans/Scanners.htm

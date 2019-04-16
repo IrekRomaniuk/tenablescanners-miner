@@ -7,10 +7,10 @@
     "url": "https://github.com/IrekRomaniuk/tenablescanners-miner",
     "entry_points": {
         "minemeld_nodes": {
-            "tenablescannersminer.Miner": "tenablescannersminer.node:Miner"
+            "tenablescanners-miner.Miner": "tenablescanners-miner.node:Miner"
         },
         "minemeld_prototypes": {
-            "tenablescannersminer.prototypes": "tenablescannersminer:prototypes"
+            "tenablescanners-miner.prototypes": "tenablescanners-miner:prototypes"
         }
     },
     "manifest_version": 0
