@@ -17,8 +17,8 @@ class Miner(BasePollerFT):
         self.polling_timeout = self.config.get('polling_timeout', 30)
         self.verify_cert = self.config.get('verify_cert', True)
         self.url = self.config.get('url', 'https://docs.tenable.com/cloud/Content/Scans/Scanners.htm')
-        self.table = int(self.config.get('table', 0))
-        self.column = int(self.config.get('column', 1))
+        self.table = self.config.get('table', 0)
+        self.column = self.config.get('column', 1)
 
     def _build_iterator(self, item):
         # builds the request and retrieves the page
