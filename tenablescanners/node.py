@@ -47,7 +47,7 @@ class Miner(BasePollerFT):
         html_soup = BeautifulSoup(r.content, "lxml")
         table = html_soup.find_all('table')[self.table]
         df = pd.read_html(str(table))[self.table]
-        result = df[df.columns[self.column].tolist()
+        result = df[df.columns[self.column]].tolist()
         result = ' '.join(result).split()
         return result
 
