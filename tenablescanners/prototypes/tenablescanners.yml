@@ -19,6 +19,9 @@ prototypes:
       interval: 3600
       # source url to scrap indicators from (don't change)
       url: https://docs.tenable.com/cloud/Content/Scans/Scanners.htm
+      # table and column numbers
+      table: 0
+      column: 1
       # age out of indicators
       # disabled, removed when they disappear from the url
       age_out:
