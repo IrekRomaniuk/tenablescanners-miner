@@ -8,6 +8,6 @@ See my post [Hacking Minemeld](https://medium.com/@irekromaniuk)
 
 ## Installation
 
-Install trough *System->Extensions->git*
+Install trough *System->Extensions->git* from branch *master*
 
 
