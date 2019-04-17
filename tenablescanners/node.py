@@ -17,8 +17,8 @@ class Miner(BasePollerFT):
         self.polling_timeout = self.config.get('polling_timeout', 30)
         self.verify_cert = self.config.get('verify_cert', True)
         self.url = self.config.get('url', 'https://docs.tenable.com/cloud/Content/Scans/Scanners.htm')
-        self.table = self.config.get('table', 0)
-        self.column = self.config.get('column', 1)
+        self.table_index = self.config.get('table', 0)
+        self.column_index = self.config.get('column', 1)
 
     def _build_iterator(self, item):
         # builds the request and retrieves the page
@@ -39,12 +39,12 @@ class Miner(BasePollerFT):
             LOG.debug('%s - exception in request: %s %s',
                       self.name, r.status_code, r.content)
             raise
-        LOG.info('nessuscanner table: %s - colmun: %s', self.table, self.column)
+        LOG.info('nessuscanner table: %s - colmun: %s', self.table_index, self.column_index)
         # parse the table
         html_soup = BeautifulSoup(r.content, "lxml")
-        table = html_soup.find_all('table')[self.table]
-        df = pd.read_html(str(table))[self.table]
-        result = df[df.columns[self.column]].tolist()
+        table = html_soup.find_all('table')[self.table_index]
+        df = pd.read_html(str(table))[self.table_index]
+        result = df[df.columns[self.column_index]].tolist()
         result = ' '.join(result).split()
         return result
 
