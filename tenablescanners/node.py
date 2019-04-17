@@ -39,7 +39,7 @@ class Miner(BasePollerFT):
             LOG.debug('%s - exception in request: %s %s',
                       self.name, r.status_code, r.content)
             raise
-
+        LOG.debug('nessuscanner table: %s - colmun: %s', self.table, self.column)
         # parse the table
         html_soup = BeautifulSoup(r.content, "lxml")
         table = html_soup.find_all('table')[self.table]
