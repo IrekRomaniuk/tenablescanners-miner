@@ -11,6 +11,9 @@ LOG = logging.getLogger(__name__)
 
 
 class Miner(BasePollerFT):
+    url = None
+    table = None
+    column = None
     def configure(self):
         super(Miner, self).configure()
 
