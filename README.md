@@ -12,7 +12,7 @@ Install trough *System->Extensions->git* from branch *master*
 
 ## Releases 
 
-# New in version 0.4
+### New in version 0.4
 
 - pick table and column index in config
 
